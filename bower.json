@@ -1,0 +1,25 @@
+{
+  "name": "site",
+  "description": "new site",
+  "main": "gulpfile.js",
+  "authors": [
+    "Harry Pujols"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "site"
+  ],
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.2.0",
+    "vue": "^1.0.26",
+    "modernizr": "^3.3.1"
+  }
+}

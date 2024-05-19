@@ -1,0 +1,142 @@
+@import 'normalize';
+
+/* ==========================================================================
+ *    variables
+ * ========================================================================== */
+$yellow: #fef734;
+$green: #00f900;
+
+/* ==========================================================================
+ *    animation
+ * ========================================================================== */
+@mixin blink($name, $foreground, $background) {
+  @keyframes #{$name}-blinking {
+    from {
+      background-color: $background;
+      color: $foreground;
+    }
+
+    to {
+      background-color: $foreground;
+      color: $background;
+    }
+  }
+
+  .blink {
+      animation: #{$name}-blinking 0.7s infinite;
+      animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  }
+}
+
+/* ==========================================================================
+ *    themes
+ * ========================================================================== */
+
+input {
+  color: transparent;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: fixed;
+  top: -1000px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  min-height: 100%;
+  padding: 0;
+}
+
+.touch {
+  cursor: pointer;
+}
+
+.container {
+  margin: 10px 5px;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+  @include blink('default', $yellow, black);
+}
+
+.light {
+  @include blink('default', $yellow, black);
+}
+
+.homebrew,
+.brew {
+  background-color: black;
+  color: $green;
+  @include blink('homebrew', $green, black);
+
+  .echo {
+    color: #014804;
+  }
+}
+
+.solarized,
+.solarized-dark {
+  background-color: #073642;
+  color: #eee8d5;
+  @include blink('solarized', #dc322f, #073642);
+
+  .echo {
+    color: #657b83;
+  }
+}
+
+.solarized-light {
+  background-color: #fdf6e3;
+  color: #586e75;
+  @include blink('solarized-light', #b58900, #fdf6e3);
+
+  .echo {
+    color: #93a1a1;
+  }
+}
+
+.c-64 {
+  background-color: #52469f;
+  color: #8b80cf;
+  @include blink('c-64', #8b80cf, #52469f);
+
+  .echo {
+    color: #8b80cf;
+  }
+}
+
+.trs-80 {
+  background-color: $green;
+  color: black;
+  @include blink('trs-80', blue, yellow);
+
+  .echo {
+    color: black;
+  }
+}
+
+.caret {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  padding: 5px 2px;
+}
+
+.echo {
+  color: grey;
+}
+
+.hidden {
+  opacity: 0;
+}
