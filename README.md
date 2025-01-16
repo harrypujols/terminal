@@ -1,6 +1,8 @@
 # Harry's Terminal
+
 ## to initialize
+
 - `cd` to this directory
-- run `gulp`
+- run `npm install`
 - run `npm start`
-- profit
+- profit (?)
