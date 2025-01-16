@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" id="app">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Harry's Terminal</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body v-bind:class="prefs.theme" v-on:click="activate">
+    <audio id="beep" src="audio/beep-29.mp3"></audio>
+    <div class="container">
+      <p v-for="item in log" class="{{ item.class }}" track-by="$index">
+        {{ item.message }}
+      </p>
+      <p id="console">
+        <span>>&nbsp;</span>{{ prompt }}<span class="caret blink"></span>
+      </p>
+      <input v-model="prompt" id="command" v-on:keyup.enter="submit" />
+      <script src="js/scripts.js"></script>
+    </div>
+  </body>
+</html>

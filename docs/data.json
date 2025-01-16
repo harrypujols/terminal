@@ -1,0 +1,64 @@
+{
+  "hello": [{
+      "message": "Harry's Terminal v0.01"
+    }, {
+      "message": "<c>2016 Harry Pujols"
+    }, {
+      "message": "Type \"HELP\" for command list"
+    }],
+
+	"help": [{
+			"message": "Harry's Terminal Commands"
+		}, {
+			"message": "CLS ------------- Clear Screen"
+		}, {
+			"message": "HELP ------------ Show Command List"
+		}, {
+			"message": "REBOOT ---------- Restart Session"
+		}, {
+			"message": "CONTACT --------- Contact Harry"
+		}, {
+			"message": "ABOUT ----------- Self Explanatory"
+		}, {
+			"message": "THEME ----------- Change The Color Scheme"
+		}, {
+			"message": "MUTE ------------ Toggle beep on/off"
+		}],
+
+    "social": [{
+  			"message": "Select number (will open in new browser window)"
+  		}, {
+  			"message": "[1] Bluesky"
+  		}, {
+  			"message": "[2] LinkedIn"
+  		}, {
+  			"message": "[3] Stack Overflow"
+  		}, {
+  			"message": "[4] Github"
+  		}, {
+  			"message": "[x] Exit"
+  		}],
+
+      "about": [{
+          "message": "Harry's Terminal is a barebones operating system"
+        }, {
+          "message": "built with bespoke HTML, CSS and JavaScript"
+        }, {
+          "message": "with the aid of the Vue.js library."
+        }, {
+          "message": "Coded in New York City"
+        }, {
+          "message": "by a front-end developer named Harry."
+        }, {
+          "message": "Type \"CONTACT\" to get in touch with him."
+      }],
+
+      "themes": [{
+          "message": "Type the theme name to change color scheme"
+        }, {
+          "message": "Themes available:"
+        }, {
+          "message": "Dark, Light, Homebrew, Solarized-Light, Solarized-Dark, C-64"
+      }]
+
+}
