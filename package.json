@@ -14,10 +14,9 @@
     "watch:app": "chokidar 'js/app.js' -c 'browser-sync reload'",
     "watch:data": "chokidar 'data/data.json' -c 'browser-sync reload'",
     "start": "browser-sync start --server --files 'css/*.css, js/*.js, *.html, data/data.json'",
-    "deploy": "npm run build && npm run move && npm run copy",
+    "deploy": "npm run build && npm run copy",
     "build": "npm-run-all sass scripts",
-    "copy": "copyfiles -u 1 css/* js/* audio/* data/data.json docs/",
-    "move": "cp ./index.html docs/index.html"
+    "copy": "copyfiles -u -a *.html css/* js/* audio/* data/data.json docs/"
   },
   "repository": {
     "type": "git",
