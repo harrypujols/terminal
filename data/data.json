@@ -28,7 +28,7 @@
     "social": [{
   			"message": "Select number (will open in new browser window)"
   		}, {
-  			"message": "[1] Twitter"
+  			"message": "[1] Bluesky"
   		}, {
   			"message": "[2] LinkedIn"
   		}, {
