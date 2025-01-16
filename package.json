@@ -4,9 +4,8 @@
   "description": "Harry's Old site",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all sass scripts watch",
     "serve": "npm-run-all sass scripts watch",
-    "sass": "node-sass -o css sass",
+    "sass": "node-sass -o dev/css sass",
     "scripts": "concat -o js/scripts.js js/modernizr.js js/vue.js js/app.js",
     "watch": "npm-run-all watch:sass watch:scripts watch:html watch:app watch:data",
     "watch:sass": "chokidar 'sass/*.scss' -c 'npm run sass'",
@@ -14,7 +13,10 @@
     "watch:html": "chokidar '*.html' -c 'browser-sync reload'",
     "watch:app": "chokidar 'js/app.js' -c 'browser-sync reload'",
     "watch:data": "chokidar 'data/data.json' -c 'browser-sync reload'",
-    "start": "browser-sync start --server --files 'css/*.css, js/*.js, *.html, data/data.json'"
+    "start": "browser-sync start --server --files 'css/*.css, js/*.js, *.html, data/data.json'",
+    "deploy": "npm run build && npm run copy",
+    "build": "npm-run-all sass scripts",
+    "copy": "copyfiles -u 1 css/* js/* ./*.html data/data.json docs/"
   },
   "repository": {
     "type": "git",
@@ -35,6 +37,7 @@
     "browser-sync": "^3.0.3",
     "chokidar-cli": "^3.0.0",
     "concat": "^1.0.3",
+    "copyfiles": "^2.4.1",
     "npm-run-all": "^4.1.5",
     "sass": "^1.83.4"
   }
